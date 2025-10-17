@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đơn Hàng - Hôn nè</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+<body>
+
+    <main class="checkout-main-content">
+        <div class="checkout-container">
+            <h1>Xác nhận và Thanh toán</h1>
+            <form id="checkout-form">
+                
+                <section class="shipping-info">
+                    <h2>1. Thông tin giao hàng</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (tùy chọn):</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Địa chỉ nhận hàng:</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Ghi chú cho đơn hàng:</label>
+                        <textarea id="notes" name="notes" rows="2"></textarea>
+                    </div>
+                </section>
+
+                <section class="payment-method">
+                    <h2>2. Phương thức thanh toán</h2>
+                    
+                    <div class="radio-group">
+                        <input type="radio" id="cod" name="payment-method" value="cod" checked>
+                        <label for="cod">Thanh toán khi nhận hàng (COD)</label>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                        <label for="bank-transfer">Chuyển khoản ngân hàng</label>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <input type="radio" id="card" name="payment-method" value="card">
+                        <label for="card">Thanh toán bằng thẻ (Visa/Master)</label>
+                    </div>
+                </section>
+
+                <section class="order-summary">
+                    <h2>3. Tóm tắt đơn hàng</h2>
+                    <div id="checkout-summary-details">
+                        <p>Tổng tiền hàng: <span id="summary-total-price">Đang tải...</span></p>
+                        <p>Phí vận chuyển: <span id="summary-shipping-fee">30.000đ</span></p>
+                        <h3>Thành tiền: <strong id="summary-grand-total">Đang tính...</strong></h3>
+                    </div>
+                </section>
+
+                <button type="submit" class="btn-submit-order">HOÀN TẤT ĐẶT HÀNG</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="path/to/your/main.js"></script>
+
+</body>
+</html>

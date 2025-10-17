@@ -70,7 +70,7 @@ const productLaptop = document.getElementById('laptop');
 const productDienThoai = document.getElementById('phone');
 
 if (productHot) {
-    fetch('http://localhost:3000/products')
+    fetch('https://my-json-server.typicode.com/diepain1/backend/products')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -91,7 +91,7 @@ const searchInput= document.getElementById("search-input");
 let allProductData= [];
 const sortPrice=document.getElementById('sort-price');
 if (productAll) {
-    fetch('http://localhost:3000/products')
+    fetch('https://my-json-server.typicode.com/diepain1/backend/products')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -162,7 +162,7 @@ if(productDetailDiv){
   const urlParam = new URLSearchParams(window.location.search);
   const id = urlParam.get("id");
   
-   fetch(`http://localhost:3000/products/${id}`)
+   fetch(`https://my-json-server.typicode.com/diepain1/backend/products/${id}`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -289,7 +289,7 @@ document.addEventListener('click',function(e){
     if(target && target.id=="addCartBtn"){
         console.log(target);    
         const id = target.getAttribute('productId');
-        fetch(`http://localhost:3000/products/${id}`)
+        fetch(`https://my-json-server.typicode.com/diepain1/backend/products/${id}`)
         .then(response => response.json())
         .then(data => {
             const product = new Product(
@@ -339,7 +339,7 @@ header.innerHTML=`
 
     <!-- Menu -->
     <nav class="menu">
-      <a href="index2.html">Trang Chủ</a>
+      <a href="index.html">Trang Chủ</a>
       <a href="product.html">Sản phẩm </a>
       <a href="about.html">Thông Tin </a>
       <a href="discount.html">Khuyến Mãi </a>
@@ -390,7 +390,7 @@ footer.innerHTML=`
         <li>SỐ CSKH: 02873011021 (10h - 18h)</li>
         <li>Ngày cấp: 20/07/2020</li>
         <li>Tuyển dụng: <a href="mailto:hr@Hôn nè.vn">hr@Hôn nè.vn</a></li>
-        <li>Website: <a href="index2.html">Hôn nè.vn</a></li>
+        <li>Website: <a href="index.html">Hôn nè.vn</a></li>
         <li>For business: <a href="mailto:contact@Hôn nè.vn">contact@Hôn nè.vn</a></li>
       </ul>
     </div>
