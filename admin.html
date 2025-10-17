@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Quản Trị</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2 class="logo">Admin<span>Panel</span></h2>
+    <nav>
+      <button id="tabProducts" class="active"><i class="icon">📦</i> Quản lý Sản phẩm</button>
+      <button id="tabUsers"><i class="icon">👤</i> Quản lý Người dùng</button>
+    </nav>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Trang Quản Trị</h1>
+    </header>
+
+    <!-- Quản lý sản phẩm -->
+    <section id="productSection">
+      <div class="section-header">
+        <h2>Danh sách sản phẩm</h2>
+        <button id="addProductBtn" class="primary-btn">+ Thêm sản phẩm</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Giá</th>
+              <th>Danh mục</th>
+              <th>Hot</th>
+              <th>Ảnh</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+
+      <h3>Thêm / Sửa sản phẩm</h3>
+      <form id="productForm" class="form-card">
+        <input type="hidden" id="productId">
+
+        <div class="form-row">
+          <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+          <input type="number" id="productPrice" placeholder="Giá" required>
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="productCategory" placeholder="Danh mục" required>
+          <label class="checkbox">
+            <input type="checkbox" id="productHot">
+            Sản phẩm hot
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="file-upload">
+            <input type="file" id="productImageFile" accept="image/*" required>
+          </div>
+          <img id="previewImage" src="" alt="Preview" style="max-width:100px; display:none;">
+        </div>
+
+        <textarea id="productDesc" placeholder="Mô tả sản phẩm..." required></textarea>
+        <button type="submit" class="primary-btn">Lưu</button>
+      </form>
+    </section>
+
+    <!-- Quản lý người dùng -->
+    <section id="userSection" style="display:none;">
+      <div class="section-header">
+        <h2>Danh sách người dùng</h2>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên đăng nhập</th>
+              <th>Quyền</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
